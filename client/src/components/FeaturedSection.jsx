@@ -17,7 +17,7 @@ const FeaturedSection = () => {
   const fetchFeaturedCars = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`${API_URL}/car/`);
+      const response = await fetch(`${API_URL}/car`);
       const data = await response.json();
       
       if (data.success) {
