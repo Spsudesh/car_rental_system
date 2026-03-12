@@ -1,10 +1,10 @@
 import express from"express";
 import "dotenv/config";
+import cors from"cors";
 import connectDB from"./configs/db.js";
 import userRouter from"./routes/userRoutes.js";
 import ownerRouter from"./routes/ownerRoutes.js";
 import carRouter from"./routes/carRoutes.js";
-import cors from"cors";
 
 // Initialize express app
 const app=express();
@@ -12,22 +12,24 @@ const app=express();
 // connect db
 await connectDB();
 
-
-// middleware
-app.use(cors({
-  origin: 'https://car-rental-system-4xa4.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
+//middleware
+const corsOptions = {
+  origin: [
+    "https://car-rental-system-git-main-spsudeshs-projects.vercel.app",
+    "http://localhost:3001",
+    "http://localhost:5173"
+  ],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+};
+app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 
 app.get("/", (req, res) => res.send("server is running"));
 app.use('/api/user', userRouter)
 app.use('/api/owner',ownerRouter)
 app.use('/api/car', carRouter)
-
-
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
