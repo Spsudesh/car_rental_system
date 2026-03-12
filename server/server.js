@@ -15,7 +15,7 @@ await connectDB();
 //middleware
 const corsOptions = {
   origin: [
-    "https://car-rental-system-git-main-spsudeshs-projects.vercel.app",
+    "https://car-rental-system-ochre.vercel.app",
     "http://localhost:3001",
     "http://localhost:5173"
   ],
