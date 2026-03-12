@@ -18,7 +18,7 @@ const CarCard = ({ car }) => {
           alt={`${car.brand} ${car.model}`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        {car.isAvaliable && (
+        {car.isAvailable && (
           <p className="absolute top-4 left-4 bg-primary/90 text-white text-xs px-2.5 py-1 rounded-full">
             Available Now
           </p>

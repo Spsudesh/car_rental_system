@@ -6,26 +6,26 @@ const Testimonial = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Jinal Thummar",
-      location: "Ahmedabad, Gujarat",
+      name: "Sanika Patil",
+      location: "Sangli, Maharashtra",
       image: assets.testimonial_image_1,
-      testimonial: "Exceptional service and attention to detail. Everything was handled professionally and efficiently from start to finish. Highly recommended!",
+      testimonial: "Outstanding service! The booking process was seamless and the car was in perfect condition. Highly recommend for anyone looking for reliable car rental.",
       rating: 5
     },
     {
       id: 2,
-      name: "Shrusti Thummar",
-      location: "Surat, Gujarat",
+      name: "Sakshi Deshmukh",
+      location: "Satara, Maharashtra",
       image: assets.testimonial_image_2,
-      testimonial: "I'm truly impressed by the quality and consistency. The entire process was smooth, and the results exceeded all expectations. Thank you!",
+      testimonial: "Excellent experience from start to finish. The team was professional and the vehicle exceeded my expectations. Will definitely book again!",
       rating: 5
     },
     {
       id: 3,
-      name: "Brinda Thummar",
-      location: "Surat, Gujarat",
+      name: "Samruddhi Jadhav",
+      location: "Kolhapur, Maharashtra",
       image: assets.testimonial_image_1,
-      testimonial: "Fantastic experience! From start to finish, the team was professional, responsive, and genuinely cared about delivering great results.",
+      testimonial: "Fantastic service with great attention to detail. The entire process was smooth and hassle-free. Truly a premium car rental experience!",
       rating: 4
     },
   ];
@@ -57,7 +57,7 @@ const Testimonial = () => {
       <div className="max-w-7xl mx-auto">
         <Title
           title="What Our Customers Say"
-          subTitle="Discover why discerning travelers choose StayVenture for their luxury accommodations around the world."
+          subTitle="Hear from our valued customers across Maharashtra about their exceptional car rental experiences."
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">

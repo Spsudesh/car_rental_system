@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import gmail_logo from "./gmail_logo.svg";
 import facebook_logo from "./facebook_logo.svg";
 import instagram_logo from "./instagram_logo.svg";
@@ -41,10 +40,9 @@ import car_image2 from "./car_image2.png"
 import car_image3 from "./car_image3.png"
 import car_image4 from "./car_image4.png"
 
-export const cityList = ['New York', 'Los Angeles', 'Houston', 'Chicago']
+export const cityList = ['Sangli', 'Satara', 'Karad', 'Kolhapur', 'Pune']
 
 export const assets = {
-    logo,
     gmail_logo,
     facebook_logo,
     instagram_logo,
@@ -103,7 +101,7 @@ export const ownerMenuLinks = [
 
 export const dummyUserData = {
   "_id": "6847f7cab3d8daecdb517095",
-  "name": "GreatStack",
+  "name": "Admin",
   "email": "admin@example.com",
   "role": "owner",
   "image": user_profile,
@@ -122,8 +120,8 @@ export const dummyCarData = [
         "fuel_type": "Hybrid",
         "transmission": "Semi-Automatic",
         "pricePerDay": 300,
-        "location": "New York",
-        "description": "The BMW X5 is a mid-size luxury SUV produced by BMW. The X5 made its debut in 1999 as the first SUV ever produced by BMW.",
+        "location": "Pune",
+        "description": "The BMW X5 is a mid-size luxury SUV produced by BMW.",
         "isAvaliable": true,
         "createdAt": "2025-04-16T07:26:56.215Z",
     },
@@ -139,15 +137,15 @@ export const dummyCarData = [
         "fuel_type": "Diesel",
         "transmission": "Manual",
         "pricePerDay": 130,
-        "location": "Chicago",
-        "description": "The Toyota Corolla is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
+        "location": "Kolhapur",
+        "description": "The Toyota Corolla is a reliable sedan perfect for city driving.",
         "isAvaliable": true,
         "createdAt": "2025-04-16T08:33:57.993Z",
     },
     {
         "_id": "67ff6b9f8f1b3684286a2a68",
         "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Jeep ",
+        "brand": "Jeep",
         "model": "Wrangler",
         "image": car_image3,
         "year": 2023,
@@ -156,8 +154,8 @@ export const dummyCarData = [
         "fuel_type": "Hybrid",
         "transmission": "Automatic",
         "pricePerDay": 200,
-        "location": "Los Angeles",
-        "description": "The Jeep Wrangler is a mid-size luxury SUV produced by Jeep. The Wrangler made its debut in 2003 as the first SUV ever produced by Jeep.",
+        "location": "Sangli",
+        "description": "The Jeep Wrangler is perfect for off-road adventures.",
         "isAvaliable": true,
         "createdAt": "2025-04-16T08:34:39.592Z",
     },
@@ -173,8 +171,42 @@ export const dummyCarData = [
         "fuel_type": "Diesel",
         "transmission": "Semi-Automatic",
         "pricePerDay": 209,
-        "location": "Houston",
-        "description": "This is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
+        "location": "Satara",
+        "description": "This is a mid-size luxury sedan with great comfort.",
+        "isAvaliable": true,
+        "createdAt": "2025-04-17T06:15:47.318Z",
+    },
+    {
+        "_id": "68009c93a3f5fc6338ea7e35",
+        "owner": "67fe3467ed8a8fe17d0ba6e2",
+        "brand": "Mercedes-Benz",
+        "model": "C-Class",
+        "image": car_image1,
+        "year": 2023,
+        "category": "Sedan",
+        "seating_capacity": 4,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "pricePerDay": 450,
+        "location": "Karad",
+        "description": "Luxury sedan with premium features and comfort.",
+        "isAvaliable": true,
+        "createdAt": "2025-04-17T06:15:47.318Z",
+    },
+    {
+        "_id": "68009c93a3f5fc6338ea7e36",
+        "owner": "67fe3467ed8a8fe17d0ba6e2",
+        "brand": "Audi",
+        "model": "Q7",
+        "image": car_image2,
+        "year": 2024,
+        "category": "SUV",
+        "seating_capacity": 7,
+        "fuel_type": "Diesel",
+        "transmission": "Automatic",
+        "pricePerDay": 550,
+        "location": "Pune",
+        "description": "Premium SUV with advanced safety features.",
         "isAvaliable": true,
         "createdAt": "2025-04-17T06:15:47.318Z",
     }
@@ -228,13 +260,32 @@ export const dummyMyBookingsData = [
 ]
 
 export const dummyDashboardData = {
-    "totalCars": 4,
-    "totalBookings": 2,
-    "pendingBookings": 0,
-    "completedBookings": 2,
+    "totalCars": 6,
+    "totalBookings": 5,
+    "pendingBookings": 2,
+    "completedBookings": 3,
     "recentBookings": [
-        dummyMyBookingsData[0],
-        dummyMyBookingsData[1]
+        {
+            "_id": "68482bcc98eb9722b7751f70",
+            "car": dummyCarData[0],
+            "price": 440,
+            "status": "confirmed",
+            "createdAt": "2025-06-10T12:57:48.244Z",
+        },
+        {
+            "_id": "68482bb598eb9722b7751f60",
+            "car": dummyCarData[1],
+            "price": 130,
+            "status": "pending",
+            "createdAt": "2025-06-10T12:57:25.613Z",
+        },
+        {
+            "_id": "684800fa0fb481c5cfd92e56",
+            "car": dummyCarData[2],
+            "price": 600,
+            "status": "pending",
+            "createdAt": "2025-06-10T09:55:06.379Z",
+        }
     ],
-    "monthlyRevenue": 840
+    "monthlyRevenue": 1170
 }
