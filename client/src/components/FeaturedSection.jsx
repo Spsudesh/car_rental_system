@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Title from "./Title";
 import { assets } from "../assets/assets";
-import CarCard from "./carCard";
+import CarCard from "./CarCard";
 import { useNavigate } from "react-router-dom";
 import { API_URL } from "../utils/api";
 
