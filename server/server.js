@@ -13,12 +13,21 @@ const app=express();
 await connectDB();
 
 //middleware
-const corsOptions = {
-  origin: [
+const allowedOrigins = [
+ 
     "https://car-rental-system-ochre.vercel.app",
+    "https://car-rental-system-git-main-spsudeshs-projects.vercel.app",
     "http://localhost:3001",
     "http://localhost:5173"
-  ],
+  
+];
+
+const corsOptions = {
+  origin: (origin, cb) => {
+    // allow requests with no origin (mobile apps, curl, postman, etc.)
+    if (!origin || allowedOrigins.includes(origin)) cb(null, true);
+    else cb(new Error("Not allowed by CORS"));
+  },
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
